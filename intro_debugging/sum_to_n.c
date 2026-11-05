@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * sum_to_n - computes the sum of numbers from 1 to n
  * @n: target number
