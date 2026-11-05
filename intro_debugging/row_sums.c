@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * row_sum - calculates the sum for a specific row
  * @row: row index
