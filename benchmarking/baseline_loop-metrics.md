@@ -1,6 +1,6 @@
 Iterations: 100000000
-Execution time: 0.227175 seconds
+Execution time: 0.230514 seconds
 Iterations: 100000000
-Execution time: 0.228518 seconds
+Execution time: 0.228380 seconds
 Iterations: 100000000
-Execution time: 0.227264 seconds
+Execution time: 0.228999 seconds
