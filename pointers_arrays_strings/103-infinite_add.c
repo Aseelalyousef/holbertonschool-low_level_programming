@@ -1,0 +1,66 @@
+#include "main.h"
+
+/**
+ * rev_string - reverses a string in place
+ * @n: string to reverse
+ */
+void rev_string(char *n)
+{
+	int i = 0, j = 0;
+	char temp;
+
+	while (n[i] != '\0')
+		i++;
+	i--;
+
+	for (j = 0; j < i; j++, i--)
+	{
+		temp = n[j];
+		n[j] = n[i];
+		n[i] = temp;
+	}
+}
+
+/**
+ * infinite_add - adds two numbers stored as strings
+ * @n1: first number string
+ * @n2: second number string
+ * @r: buffer to store the result
+ * @size_r: buffer size
+ *
+ * Return: pointer to the result, or 0 if buffer is too small
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+	int i = 0, j = 0, overflow = 0, digits = 0;
+	int val1 = 0, val2 = 0, temp_tot = 0;
+
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+	i--;
+	j--;
+	if (j >= size_r || i >= size_r)
+		return (0);
+
+	while (j >= 0 || i >= 0 || overflow == 1)
+	{
+		val1 = (i < 0) ? 0 : (n1[i] - '0');
+		val2 = (j < 0) ? 0 : (n2[j] - '0');
+		temp_tot = val1 + val2 + overflow;
+		overflow = (temp_tot >= 10) ? 1 : 0;
+
+		if (digits >= (size_r - 1))
+			return (0);
+		r[digits] = (temp_tot % 10) + '0';
+		digits++;
+		j--;
+		i--;
+	}
+	if (digits == size_r)
+		return (0);
+	r[digits] = '\0';
+	rev_string(r);
+	return (r);
+}
