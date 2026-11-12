@@ -16,7 +16,8 @@ A terminal-based interactive calculator written in C.
 - 0: Quit
 
 ## Numeric Behavior
-Uses standard C numeric types and scanf for input.
+The calculator consistently uses double-precision floating-point numbers (decimals) for all operands and arithmetic operations, formatted cleanly with %g (e.g., 10 / 4 = 2.5).
 
 ## Known Limitations
-Non-numeric input is not handled in the mandatory version.
+- Non-numeric input is not handled in the mandatory version.
+- Division by zero is caught and prints: Error: division by zero
