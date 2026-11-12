@@ -1,3 +1,2 @@
-# C - Pointers, arrays and strings
-
-This directory contains projects and exercises focused on understanding pointers, memory allocation, arrays, and string manipulation in standard C (C89/gnu89).
+# C - More pointers, arrays and strings
+This directory contains solutions for C pointers, arrays, and strings tasks at Holberton School.
